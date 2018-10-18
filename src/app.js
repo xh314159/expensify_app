@@ -12,15 +12,15 @@ import './styles/styles.scss';
 
 const store = configureStore();
 
-store.subscribe((() => {
-    const state = store.getState();
-    const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-    console.log(visibleExpenses);
-}));
+// store.subscribe((() => {
+//     const state = store.getState();
+//     const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
+//     console.log(visibleExpenses);
+// }));
 
-store.dispatch(addExpense({ description: 'water bill', amount: 4500 }));
-store.dispatch(addExpense({ description: 'gas bill' }));
-store.dispatch(addExpense({ description: 'rent', amount: 109500 }));
+// store.dispatch(addExpense({ description: 'water bill', amount: 4500 }));
+// store.dispatch(addExpense({ description: 'gas bill' }));
+// store.dispatch(addExpense({ description: 'rent', amount: 109500 }));
 
 const jsx = (
     <Provider store={store}>
